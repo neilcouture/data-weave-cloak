@@ -1,13 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import { Box, Typography, CircularProgress } from '@mui/material';
 
+// This page is now handled by MainLayout, but kept as fallback
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'background.default',
+      }}
+    >
+      <CircularProgress size={60} sx={{ mb: 2 }} />
+      <Typography variant="h6" color="text.secondary">
+        Loading Healthcare Data Clean Room...
+      </Typography>
+    </Box>
   );
 };
 
